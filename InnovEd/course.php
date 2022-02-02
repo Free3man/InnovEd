@@ -200,8 +200,8 @@ session_start();
 		<div class="area-information">
 			<iframe class="video_box" src="https://www.youtube.com/embed/FCMxA3m_Imc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<div class="row">
-				<div class="col-6"><a href="pdf_files_of_courses/GG.pdf" id="lecture_link"><img src="./img/icons/exam.png" alt="Додаткові матеріали" class="icon-bottom"></a></div>
-				<div class="col-6"><a href="./ok.php"><img src="./img/icons/article.png" alt="Перевірка засвоєного матеріалу" class="icon-bottom"></a></div>
+				<div class="col-6"><a href="" id="lecture_link"><img src="./img/icons/exam.png" alt="Додаткові матеріали" class="icon-bottom"></a></div>
+				<div class="col-6"><a href=""><img src="./img/icons/article.png" alt="Перевірка засвоєного матеріалу" class="icon-bottom"></a></div>
 			</div>
 		</div>
 		<div class="message-area" id="message-area">
@@ -409,6 +409,7 @@ session_start();
 			{
 				$('#lecture_link').attr('href', "pdf_files_of_courses/"+topics[i]['lecture_name']+"");
 				$('.video_box').attr('src', ""+topics[i]['video_name']+"");
+				$("#test_link").attr('href', "./test_again.php?test_id="+topics[i]['test_name']+"");
 				$(".message-area").hide();	
 				$(".area-information").show();
 				break;
